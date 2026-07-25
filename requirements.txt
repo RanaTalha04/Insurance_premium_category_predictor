@@ -1,7 +1,9 @@
-fastapi
+fastapi[standard]
 uvicorn
 pydantic
 numpy
 pandas
 scikit-learn
 joblib
+streamlit
+notebook

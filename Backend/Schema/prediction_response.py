@@ -14,8 +14,3 @@ class PredictionResponse(BaseModel):
         description="Confidence score of the prediction", 
         example=0.85
     )
-    class_probabilities: Dict[str, float] = Field(
-        ...,
-        description="Probabilities for each insurance category",
-        example={"Low": 0.1, "Medium": 0.5, "High": 0.85},
-    )

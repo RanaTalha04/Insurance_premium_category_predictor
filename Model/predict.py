@@ -34,10 +34,7 @@ def predict_output(user_input: pd.DataFrame) -> str:
     probabilities = model.predict_proba(input_df)[0]
     confidence = max(probabilities)
 
-    class_probs = dict(zip(class_labels, map(lambda p: round(p, 4), probabilities)))
-
     return {
         "predicted_category": prediction,
-        "confidence": round(confidence, 4),
-        "class_probabilities": class_probs,
+        "confidence": round(confidence, 4)
     }
